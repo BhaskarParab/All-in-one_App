@@ -1,0 +1,247 @@
+.bg-color{
+    background-color: black;
+}
+
+.clock-color{
+    fill: black;
+    stroke: rgba(255, 255, 255, 0.616);
+    align-items: center;
+    cursor: pointer;
+}
+
+.widgets{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.clock-page{
+    background-color: black;
+}
+
+.time{
+    /* height: max-content; */
+    justify-content: center;
+    display:flex;
+    margin-top: 250px;
+    font-size:xx-large;
+}
+
+.stopwatch-button{
+    padding: 10px;
+    font-size: xx-large;
+    cursor: pointer;
+    font-family:Arial, Helvetica, sans-serif;
+    font:bolder;
+    background-color: rgba(255, 255, 255, 0.616);
+    border: none;
+    color: black;
+    border-radius: 5px;
+    transition: 0.3s;
+    display: inline-block;
+    opacity: 1.6;
+    /* box-shadow: 5px 10px white; */
+}
+
+.time-buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stopwatch-button span{
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.stopwatch-button span:after{
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.stopwatch-button:hover span{
+    padding-right: 25px;
+}
+
+.stopwatch-button:hover span:after{
+    opacity: 1;
+    right: 0;
+}
+
+.time-buttons .stopwatch-button:hover{
+    background-color: rgba(255, 255, 255, 0.685);
+}
+
+.arrow-back{
+    margin: top 20px; margin-left: -20px; cursor:pointer;
+}
+
+.arrow-back:hover{
+    fill: rgba(255, 255, 255, 0.685);
+}
+
+.stop-button span{
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.stop-button span:after{
+    content: '\25A0';
+    position: absolute;
+    opacity: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.stop-button:hover span{
+    padding-right: 30px;
+}
+
+.stop-button:hover span:after{
+    opacity: 1;
+    right: 0;
+}
+
+.stopwatch-buttons .stop-button:hover{
+    background-color: rgba(255, 255, 255, 0.685);
+}
+
+.stopwatch-buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;  
+}
+
+.stop-button{
+    padding: 10px;
+    font-size: xx-large;
+    cursor: pointer;
+    font-family:Arial, Helvetica, sans-serif;
+    font:bolder;
+    background-color: rgba(255, 255, 255, 0.616);
+    border: none;
+    color: black;
+    border-radius: 5px;
+    transition: 0.3s;
+    display: inline-block;
+    opacity: 1.6;
+    /* box-shadow: 5px 10px white; */
+}
+
+/*resume button*/
+
+.resume-button span{
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.resume-button span:after{
+    content: "\25B6";
+    position: absolute;
+    opacity: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.resume-button:hover span{
+    padding-right: 35px;
+}
+
+.resume-button:hover span:after{
+    opacity: 1;
+    right: 0;
+}
+
+.stopwatch-buttons .resume-button:hover{
+    background-color: rgba(255, 255, 255, 0.685);
+}
+
+.stopwatch-buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;  
+}
+
+.resume-button{
+    padding: 10px;
+    font-size: xx-large;
+    cursor: pointer;
+    font-family:Arial, Helvetica, sans-serif;
+    font:bolder;
+    background-color: rgba(255, 255, 255, 0.616);
+    border: none;
+    color: black;
+    border-radius: 5px;
+    transition: 0.3s;
+    display: inline-block;
+    opacity: 1.6;
+    /* box-shadow: 5px 10px white; */
+}
+
+/* reset button style */
+
+.reset-button span{
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.reset-button span:after{
+    content: "\27F2";
+    position: absolute;
+    opacity: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.reset-button:hover span{
+    padding-right: 35px;
+}
+
+.reset-button:hover span:after{
+    opacity: 1;
+    right: 0;
+}
+
+.stopwatch-buttons .reset-button:hover{
+    background-color: rgba(255, 255, 255, 0.685);
+}
+
+.stopwatch-buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;  
+}
+
+.reset-button{
+    padding: 10px;
+    font-size: xx-large;
+    cursor: pointer;
+    font-family:Arial, Helvetica, sans-serif;
+    font:bolder;
+    background-color: rgba(255, 255, 255, 0.616);
+    border: none;
+    color: black;
+    border-radius: 5px;
+    transition: 0.3s;
+    display: inline-block;
+    opacity: 1.6;
+    /* box-shadow: 5px 10px white; */
+}
+
+.text{
+    color: rgba(255, 255, 255, 0.616);
+    font-family:'Courier New', Courier, monospace;
+    cursor:pointer;
+    font-weight: bolder;
+}
