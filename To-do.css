@@ -1,0 +1,76 @@
+.bg-color{
+    background-color: black;
+}
+
+.page{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+
+}
+
+input[type='text']{
+    background-color: rgba(255, 255, 255, 0.616);
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    font-size: x-large;
+    width:500px;
+    /* coolr */
+}
+
+input::placeholder{
+    color: rgb(255, 255, 255);
+    opacity: 0.8;
+    font-weight: lighter;
+}
+
+input:focus{
+    outline: none;
+}
+
+.columns{
+    margin-top: 50px;
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-content:space-between;
+}
+
+.To-Do-column{
+    background-color: rgba(199, 45, 45, 0.616);
+    max-width:300px;
+    border-radius: 5px;
+    padding: 5px;
+    height: 820px;
+}
+
+.Doing-column{
+    background-color: rgba(251, 255, 6, 0.616);
+    max-width:300px;
+    border-radius: 5px;
+    padding: 5px;
+    height: 820px;
+}
+
+.Done-column{
+    background-color: rgba(98, 214, 3, 0.616);
+    max-width:300px;
+    border-radius: 5px;
+    padding: 5px;
+    height: 820px;
+}
+
+.selectBtn{
+    padding: 10px;
+    font-size: xx-large;
+    cursor: pointer;
+    font-family:Arial, Helvetica, sans-serif;
+    font:bolder;
+    background-color: rgba(255, 255, 255, 0.616);
+    border: none;
+    color: black;
+    border-radius: 5px;
+}
