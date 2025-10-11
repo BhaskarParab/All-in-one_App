@@ -1,5 +1,6 @@
 const clock = document.getElementById("clock");
-const toDo = document.getElementById('todo')
+const toDo = document.getElementById('todo');
+const weather = document.getElementById('weather')
 
 
 clock.addEventListener("click",function(){
@@ -9,4 +10,8 @@ clock.addEventListener("click",function(){
 
 toDo.addEventListener('click',()=>{
     window.location.href = "Todo.html";
+})
+
+weather.addEventListener('click', () => {
+    window.location.href = 'weather.html'
 })

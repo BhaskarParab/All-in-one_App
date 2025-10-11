@@ -7,22 +7,27 @@
     <link rel="stylesheet" href="To-do.css" />
 </head>
 <body class="bg-color">
+    <svg id="back" class="arrow-backTODO"fill="rgba(255, 255, 255, 0.616)" width="100px" height="60px" viewBox="0 0 200 200" data-name="Layer 1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"><title/><path d="M160,89.75H56l53-53a9.67,9.67,0,0,0,0-14,9.67,9.67,0,0,0-14,0l-56,56a30.18,30.18,0,0,0-8.5,18.5c0,1-.5,1.5-.5,2.5a6.34,6.34,0,0,0,.5,3,31.47,31.47,0,0,0,8.5,18.5l56,56a9.9,9.9,0,0,0,14-14l-52.5-53.5H160a10,10,0,0,0,0-20Z"/></svg>
     <div class="page">
     <button id="selectBtn" class="selectBtn">Select</button>
+    <button id="deleteBtn" class="selectBtn">Delete</button>
     <input id="content" class="inputBar" type="text" placeholder="Enter your tasks">
     </div>
     <div class="columns">
-    <div class="To-Do-column">
         <h1 style="color:rgba(255, 255, 255, 0.616); font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">To-Do</h1>
+            <h1 style="color:rgba(255, 255, 255, 0.616); font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Doing</h1>
+        <h1 style="color:rgba(255, 255, 255, 0.616); font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Done</h1>
+    
+        <div id="ToDo" class="To-Do-column">
+        
         <div id="tasks" style="color:rgba(255, 255, 255, 0.616); font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-weight: lighter;font-weight: lighter;"></div>
     </div>
-    <div class="Doing-column">
-        <h1 style="color:rgba(255, 255, 255, 0.616); font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Doing</h1>
-        <h1 style="color:rgba(255, 255, 255, 0.616); font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-weight: lighter;"></h1>
+    <div id="doing" class="Doing-column">
+        <div id="doingContent" style="color:rgba(255, 255, 255, 0.616); font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-weight: lighter;"></div>
     </div>
-    <div class="Done-column">
-        <h1 style="color:rgba(255, 255, 255, 0.616); font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Done</h1>
-        <h1 style="color:rgba(255, 255, 255, 0.616); font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-weight: lighter;"></h1>
+    <div id="done" class="Done-column">
+
+        <div id="doneContent" style="color:rgba(255, 255, 255, 0.616); font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-weight: lighter;"></div>
     </div>
     </div>
     <script src="Todo.js"></script>
