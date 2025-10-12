@@ -4,8 +4,8 @@ html, body{
 }
 
 .container{
-    height: 500px;
-    background-color: blue;
+    height: 700px;
+    background: linear-gradient( to left top,rgb(0, 103, 172),rgb(0, 160, 189), rgb(252, 255, 87));
     width: 500px;
     border-radius: 20px;
 }
@@ -16,3 +16,51 @@ body{
     justify-content: center;
 }
 
+input{
+    padding: 10px;
+    border: none;
+    border-radius: 19px;
+}
+
+.top{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 15px;
+}
+
+input[type='text']{
+    font-size:medium;
+    color: rgb(95, 95, 95);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+input:focus{
+    outline: none;
+}
+
+.bottom{
+    display: flex;
+    justify-content: center;
+    margin-top: 600px;
+}
+
+.error{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(255, 0, 0);
+    font-size: medium;
+    
+}
+
+h1{
+    font-size:xx-large;
+    color: rgb(255, 255, 255);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+}
+
+.middle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
