@@ -1,9 +1,14 @@
 const celcius = document.getElementById('celsius')
 const input = document.getElementById('input')
 const error = document.getElementById('error')
+const arrowBack = document.getElementById('back')
 
 function fetchData(){
-
+if(input.value === ''){
+    error.innerHTML = 'Enter any place'
+    return; 
+}
+else{
     fetch(`http://api.openweathermap.org/data/2.5/forecast?id=524901&appid=${APIkey}&q=${input.value}&units=metric`)
     .then((res) => {
         return res.json()
@@ -26,6 +31,7 @@ function fetchData(){
     .catch((err) => { 
         console.log(err)
     })
+    }
 }
 
 input.addEventListener('keydown',(e) =>{
@@ -33,5 +39,9 @@ input.addEventListener('keydown',(e) =>{
         fetchData()
         input.value = ''
     }
+})
+
+arrowBack.addEventListener('click', () =>{
+    window.location.href = 'home.html'
 })
 

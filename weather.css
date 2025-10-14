@@ -5,39 +5,70 @@ html, body{
 
 .container{
     height: 700px;
-    background: linear-gradient( to left top,rgb(0, 103, 172),rgb(0, 160, 189), rgb(252, 255, 87));
+    background: linear-gradient( to left top,rgb(51, 51, 51),rgb(70, 70, 70), rgb(48, 48, 48));
     width: 500px;
     border-radius: 20px;
 }
 
 body{
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+}
+
+.top {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.top input {
+  width: 350px;
+  height: 20px;
+  padding: 5px 35px 5px 10px; /* space for right icon */
+  border: none;
+  border-radius: 19px;
+  background: white;
+  font: small 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: rgb(141, 141, 141);
+  outline: none;
+}
+
+/* search icon */
+.top::after {
+  content: "";
+  position: absolute;
+  right: 60px;
+  bottom: 7px;
+  width: 18px;
+  height: 18px;
+  background: url('assets/search-svgrepo-com.svg') no-repeat center;
+  background-size: contain;
+  filter: invert(60%) brightness(90%) contrast(85%);
+  opacity: 1;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+
+/* smooth fade on focus */
+.top:has(input:focus)::after {
+  opacity: 0;
+}
+
+.viewBox{
     display: flex;
     align-items: center;
     justify-content: center;
+   width: 100%;
+   height: 90%;
 }
 
-input{
-    padding: 10px;
-    border: none;
-    border-radius: 19px;
-}
-
-.top{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 20px;
-    gap: 15px;
-}
-
-input[type='text']{
-    font-size:medium;
-    color: rgb(95, 95, 95);
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
-input:focus{
-    outline: none;
+.arrow-back{
+    margin-top: 5px;
+    margin-left: -15px;
+    cursor: pointer;
 }
 
 .bottom{
@@ -48,19 +79,53 @@ input:focus{
 
 .error{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
     font-size: medium;
-    
+    margin-top: -80px;
+    text-shadow: 0 0 4px rgb(255, 0, 0);
+    display: inline-block;
 }
 
 h1{
     font-size:xx-large;
     color: rgb(255, 255, 255);
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+    font-family:sans-serif;
+    gap: 100px;
 }
 
 .middle{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 60px;
+}
+
+.searchIcon{
+    /* background: url('assets/search-svgrepo-com.svg') no-repeat center; */
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-text-fill-color: rgb(95, 95, 95) !important;
+  transition: none !important;
+  animation: none !important;
+  color: rgb(95, 95, 95) !important;
+  /* -webkit-box-shadow: 0 0 0px 1000px white inset !important; */
+  /* transition: background-color 5000s ease-in-out 0s; */
+}
+
+.celsius h1:first-child{
+    font-size: 4rem;
+    color: rgb(211, 211, 211);
+}
+
+.celsius h1:nth-child(2){
+    font-size: 4rem;
+    color: rgb(255, 255, 255);
+}
+
+.celsius h1:last-child{
+    font-size: 4rem;
+    color: rgb(211, 211, 211);
 }
