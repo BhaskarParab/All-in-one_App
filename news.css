@@ -1,0 +1,207 @@
+.arrow-back{
+    position: relative;
+    margin-left: -10px;
+    cursor: pointer;
+}
+
+/* search icon */
+.top {
+  position: relative; /* Makes this the parent for absolute positioning */
+  display: inline-block;
+}
+
+.top input {
+  width: 350px;
+  height: 30px;
+  padding-right: 40px; /* create space for the icon inside */
+  padding-left: 10px;
+  border: none;
+  border-radius: 19px;
+  background: white;
+  font: medium 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  outline: none;
+  /* font-size: large; */
+}
+
+/* search icon fixed inside input */
+.top::after {
+  content: "";
+  position: absolute;
+  right: 12px; /* stays fixed inside the input */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  background: url('assets/search-svgrepo-com.svg') no-repeat center;
+  background-size: contain;
+  filter: invert(60%) brightness(90%) contrast(85%);
+  opacity: 1;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+
+/* smooth fade on focus */
+.top:has(input:focus)::after {
+  opacity: 0;
+}
+
+.page{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    /* padding: 100px; */
+}
+
+.card{
+    width: min-content;
+    display:list-item;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    border: none;
+    background-color: rgb(36, 36, 36);
+    box-shadow: 0px 0px 30px 1px rgba(rgb(145, 145, 145));
+    padding: 15px;
+    cursor: pointer;
+}
+
+h1{
+    color: white;
+}
+
+.page :hover{
+    background-color: rgb(41, 41, 41);
+}
+
+.image{
+    border-radius: 5px;
+}
+
+@media only screen and (max-width: 767px){
+    .navbar{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 5%;
+}
+    .top input{
+       width: 250px;
+  height: 30px;
+  padding-right: 40px; /* create space for the icon inside */
+  padding-left: 10px;
+  border: none;
+  border-radius: 19px;
+  background: white;
+  font: medium 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  outline: none;
+  /* font-size: large; */
+    }
+    .buttons{
+    gap: 10px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+    .page{
+    display: grid;
+    grid-template-columns: 1fr !important;
+    gap: 10px;
+    padding: 16px;
+}
+.card{
+    width: min-content;
+    display:list-item;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    border: none;
+    background-color: rgb(36, 36, 36);
+    box-shadow: 0px 0px 30px 1px rgba(rgb(145, 145, 145));
+    padding: 15px;
+    cursor: pointer;
+    margin: 15px;
+}
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px){
+    .navbar{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 15%;
+}
+.buttons{
+    gap: 10px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+    .page{
+    display: grid;
+    grid-template-columns: repeat(2,1fr) !important;
+    gap: 10px;
+    padding: 16px;
+}
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1399px){
+    .navbar{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 26.5%;
+}
+.buttons{
+    gap: 10px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+    .page{
+    display: grid;
+    grid-template-columns: repeat(3,1fr) !important;
+    gap: 10px;
+    padding: 16px;
+}
+}
+
+@media only screen and (min-width: 1400px){
+    .navbar{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 35%;
+}
+.buttons{
+    gap: 10px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+    .page{
+    display: grid;
+    grid-template-columns: repeat(4,1fr) !important;
+    gap: 10px;
+    padding: 16px;
+    padding-left: 65px;
+}
+}
+
+button{
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border:2px solid white;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover{
+    background-color: rgb(20, 20, 20);
+}

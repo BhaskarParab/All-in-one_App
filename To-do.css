@@ -20,7 +20,7 @@ body {
   flex-wrap: wrap;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 800px) {
   .page {
     display: flex;
     align-items: center;
