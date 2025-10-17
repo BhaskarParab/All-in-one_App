@@ -1,46 +1,56 @@
 const arrowBack = document.getElementById("back");
 const input = document.getElementById("input");
 const card = document.getElementById("card");
-const business = document.getElementById('business')
-const entertainment = document.getElementById('entertainment')
-const technology = document.getElementById('technology')
-const science = document.getElementById('science')
-const sports = document.getElementById('sports')
+const business = document.getElementById("business");
+const entertainment = document.getElementById("entertainment");
+const technology = document.getElementById("technology");
+const science = document.getElementById("science");
+const sports = document.getElementById("sports");
 
 // Create a container once and append it to body
 const page = document.createElement("div");
 page.classList.add("page");
 document.body.appendChild(page);
 
-function renderArticles(articles){
-   
-   // Clear previous content
+function renderArticles(data) {
+  let articles = data.articles;
+  let totalResults = data.totalResults;
+  if (totalResults === 0) {
+    page.innerHTML = "";
+    const error = document.createElement("h1");
+    error.classList.add("error");
+    error.innerHTML = "News not available try different topic"
+    page.appendChild(error);
+    document.body.appendChild(page);
+    return;
+  }
+  // Clear previous content
   page.innerHTML = "";
 
   articles.forEach((article) => {
-        const card = document.createElement("div");
-        const image = document.createElement("div");
-        card.classList.add("card");
-        image.classList.add("image");
-        const h1 = document.createElement("h1");
-        h1.classList.add("h1");
-        h1.innerHTML = article.title;
-        image.style.backgroundImage = `url(${article.urlToImage})`;
-        image.style.width = "370px";
-        image.style.height = "200px";
-        image.style.backgroundSize = "contain";
-        image.style.backgroundPosition = "center";
-        // card.style.border = '2px solid white'
-        card.appendChild(image);
-        card.appendChild(h1);
-        page.appendChild(card);
-        document.body.appendChild(page);
-        console.log(article);
-        card.addEventListener("click", () => {
-          window.open(`${article.url}`, "_blank");
-        });
-      });
-    }
+    const card = document.createElement("div");
+    const image = document.createElement("div");
+    card.classList.add("card");
+    image.classList.add("image");
+    const h1 = document.createElement("h1");
+    h1.classList.add("h1");
+    h1.innerHTML = article.title;
+    image.style.backgroundImage = `url(${article.urlToImage})`;
+    image.style.width = "370px";
+    image.style.height = "200px";
+    image.style.backgroundSize = "contain";
+    image.style.backgroundPosition = "center";
+    // card.style.border = '2px solid white'
+    card.appendChild(image);
+    card.appendChild(h1);
+    page.appendChild(card);
+    document.body.appendChild(page);
+    console.log(article);
+    card.addEventListener("click", () => {
+      window.open(`${article.url}`, "_blank");
+    });
+  });
+}
 
 function fetchData(query) {
   fetch(`https://newsapi.org/v2/everything?q=${query}&apiKey=${NewsAPI}`)
@@ -48,9 +58,9 @@ function fetchData(query) {
       return res.json();
     })
     .then((data) => {
-      console.log(data)
-      renderArticles(data.articles)
-      })
+      console.log(data);
+      renderArticles(data);
+    })
     .catch((err) => {
       console.log(err);
     });
@@ -89,22 +99,22 @@ input.addEventListener("keydown", (e) => {
   }
 });
 
-business.addEventListener('click', () =>{
-  fetchData('business')
-})
+business.addEventListener("click", () => {
+  fetchData("business");
+});
 
-entertainment.addEventListener('click', () =>{
-  fetchData('entertainment')
-})
+entertainment.addEventListener("click", () => {
+  fetchData("entertainment");
+});
 
-technology.addEventListener('click', () =>{
-  fetchData('technology')
-})
+technology.addEventListener("click", () => {
+  fetchData("technology");
+});
 
-science.addEventListener('click', () =>{
-  fetchData('science')
-})
+science.addEventListener("click", () => {
+  fetchData("science");
+});
 
-sports.addEventListener('click', () =>{
-  fetchData('sports')
-})
+sports.addEventListener("click", () => {
+  fetchData("sports");
+});

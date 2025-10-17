@@ -4,6 +4,28 @@
     cursor: pointer;
 }
 
+.error{
+    position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+    height: 200px;
+    width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: rgb(255, 0, 0);
+    border-radius: 10px;
+    box-shadow: -5px 5px 3px rgb(41, 41, 41);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bolder;
+    /* margin-bottom: -20px; */
+    margin:auto;        /* center box horizontally on page */
+    text-align: center; 
+}
+
 /* search icon */
 .top {
   position: relative; /* Makes this the parent for absolute positioning */
@@ -109,6 +131,27 @@ h1{
     gap: 10px;
     padding: 16px;
 }
+.error{
+    position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+    height: 200px;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: rgb(255, 0, 0);
+    border-radius: 10px;
+    box-shadow: -5px 5px 3px rgb(41, 41, 41);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bolder;
+    /* margin-bottom: -20px; */
+    margin:auto;        /* center box horizontally on page */
+    text-align: center; 
+}
 .card{
     width: min-content;
     display:list-item;
@@ -174,7 +217,7 @@ h1{
     display: flex;
     align-items: center;
     justify-content: left;
-    gap: 35%;
+    gap: 34.75%;
 }
 .buttons{
     gap: 10px;

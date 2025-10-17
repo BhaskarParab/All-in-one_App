@@ -1,0 +1,71 @@
+.arrow-back{
+    margin-left: -15px;
+}
+
+label{
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: large;
+    font-weight: bold;
+}
+
+.page{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form{
+    border-radius: 20px;
+    background-color: gray;
+    width: 300px;
+    height: 400px;
+    display:flexbox;
+    align-content: center;
+    justify-items: center;
+    padding: 10px;
+}
+
+h1{
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: large;
+}
+
+.listPage{
+    margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.listItems{
+   display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  /* gap: 10px; */
+  flex-direction: row;  /* make sure it’s a row, not column */
+  flex-wrap: nowrap; 
+}
+
+.column1,
+.column2,
+.column3,
+.column4,
+.column5 {
+  background-color: gray;
+  width: 150px;
+  height: 500px;
+  padding: 7px;
+  display: flex;              /* make each column a vertical stack */
+  flex-direction: column;     /* h1 + p appear top-to-bottom */
+  align-items:center;    /* keep text aligned to the left */       
+  /* border-radius: 6px; */
+}
+
+.error{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    font-size: large;
+    color: red;
+}

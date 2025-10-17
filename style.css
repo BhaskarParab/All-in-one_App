@@ -16,6 +16,10 @@
     gap: 50px;
 }
 
+.tracker{
+    cursor: pointer;
+}
+
 .clock-page{
     background-color: black;
 }
