@@ -1,51 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="tracker.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transaction Tracker</title>
+  <link rel="stylesheet" href="tracker.css">
 </head>
-<body style="background-color: black;">
-    <svg id="back" class="arrow-back"fill="rgba(255, 255, 255, 0.616)" width="100px" height="60px" viewBox="0 0 200 200" data-name="Layer 1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"><title/><path d="M160,89.75H56l53-53a9.67,9.67,0,0,0,0-14,9.67,9.67,0,0,0-14,0l-56,56a30.18,30.18,0,0,0-8.5,18.5c0,1-.5,1.5-.5,2.5a6.34,6.34,0,0,0,.5,3,31.47,31.47,0,0,0,8.5,18.5l56,56a9.9,9.9,0,0,0,14-14l-52.5-53.5H160a10,10,0,0,0,0-20Z"/></svg>
-    <div class="page">
+<body style="background-color: black; color: white;">
+
+  <!-- Back Button -->
+   <div class="header">
+  <svg id="back" class="arrow-back" fill="rgba(255, 255, 255, 0.616)" width="100px" height="60px" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    <path d="M160,89.75H56l53-53a9.67,9.67,0,0,0,0-14,9.67,9.67,0,0,0-14,0l-56,56a30.18,30.18,0,0,0-8.5,18.5c0,1-.5,1.5-.5,2.5a6.34,6.34,0,0,0,.5,3,31.47,31.47,0,0,0,8.5,18.5l56,56a9.9,9.9,0,0,0,14-14l-52.5-53.5H160a10,10,0,0,0,0-20Z"/>
+  </svg>
+  <h1>Expense Tracker</h1>
+</div>
+
+  <!-- Form -->
+   <div class="main-container">
+  <div class="page">
     <form class="form" id="form">
-        <label id="titlelabel" for="title">Title of transaction</label>
-        <input id="title" placeholder="Title of transaction" type="text">
-        <label for="amount">Amount</label>
-        <input id="amount" placeholder="Amount in ₹" type="number">
-        <label for="type">Type of transaction</label>
-        <select id="select" aria-label="Type of transaction">
-            <option value="">Select</option>
-            <option value="Income">Income</option>
-            <option value="Expense">Expense</option>
-        </select>
-        <label for="category">Category</label>
-        <input id="category" placeholder="Enter category eg.'Salary'" type="text">
-        <label for="date">Date</label>
-        <input id="date" type="date" placeholder="Enter Date">
-        <button id="submitBtn">Submit</button>
+      <label for="title">Title of transaction</label>
+      <input id="title" placeholder="Title of transaction" type="text">
+
+      <label for="amount">Amount</label>
+      <input id="amount" placeholder="Amount in ₹" type="number">
+
+      <label for="type">Type of transaction</label>
+      <select id="select">
+        <option value="">Select</option>
+        <option value="Income">Income</option>
+        <option value="Expense">Expense</option>
+      </select>
+
+      <label for="category">Category</label>
+      <input id="category" placeholder="Enter category eg.'Salary'" type="text">
+
+      <label for="date">Date</label>
+      <input id="date" type="date">
+
+      <button id="submitBtn">Submit</button>
     </form>
+  </div>
+  </div>
+
+  <!-- Controls -->
+
+  <div class="Table-section">
+    <div class="controls-container">
+    <button id="selectBtn">Select</button>
+    <button id="delete">Delete</button>
+  </div>
+
+  <!-- Transactions Table -->
+  <div class="listPage">
+    <div class="transactions-container">
+      <div class="transaction-header">
+        <!-- <span style="width: 30px;"></span> For checkbox -->
+        <span>Title</span>
+        <span>Amount</span>
+        <span>Type</span>
+        <span>Category</span>
+        <span>Date</span>
+      </div>
     </div>
-    <div class="listPage">
-        <div class="listItems">
-            <div class="column1">
-                <h1>Title</h1>
-            </div>
-            <div class="column2">
-                <h1>Amount</h1>
-            </div>
-            <div class="column3">
-                <h1>Type of transaction</h1>
-            </div>
-            <div class="column4">
-                <h1>Category</h1>
-            </div>
-            <div class="column5">
-                <h1>Date</h1>
-            </div>
-        </div>
+  </div>
+  </div>
+
+  <div class="charts">
+    <div class="pie-chart-container">
+        <canvas id="pie-chart" class="pie-chart-class"></canvas>
+        
     </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="tracker.js"></script>
 </body>
-<script src="tracker.js"></script>
 </html>
