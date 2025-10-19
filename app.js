@@ -3,6 +3,7 @@ const toDo = document.getElementById('todo');
 const weather = document.getElementById('weather')
 const news = document.getElementById('news')
 const tracker = document.getElementById('tracker')
+const music = document.getElementById('music')
 
 clock.addEventListener("click",function(){
     window.location.href = "clock.html"
@@ -23,4 +24,8 @@ news.addEventListener('click', () => {
 
 tracker.addEventListener('click', () => {
     window.location.href = 'tracker.html'
+})
+
+music.addEventListener('click', () => {
+    window.location.href = 'music.html'
 })

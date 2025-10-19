@@ -21,13 +21,16 @@ body {
 
 .arrow-back {
   position: absolute;
-  left: 0;           /* stick SVG to left edge */
+  left: 15px;
+  top: 15px;
   cursor: pointer;
-  margin-top: -15px;
+  width: 60px;       /* Larger for desktop */
+  height: 60px;
+  transition: all 0.3s ease;
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 2.5rem; /* Bigger on desktop */
   font-weight: 800;
   text-transform: uppercase;
   background: linear-gradient(90deg, #ff92f1, #880376);
@@ -35,7 +38,8 @@ h1 {
   -webkit-text-fill-color: transparent;
   letter-spacing: 2px;
   text-align: center;
-  margin-top: 15px;
+  margin-top: 20px;
+  transition: all 0.3s ease;
 }
 
 
@@ -301,7 +305,7 @@ input[type="date"] {
     }
 }
 
-@media (max-width: 480px) {
+@media only screen and (max-width: 767px) {
     .transaction-header span:nth-child(2),
     .transaction-header span:nth-child(3),
     .transaction-header span:nth-child(4),
@@ -322,6 +326,17 @@ input[type="date"] {
     input, select, button {
         padding: 10px 12px;
     }
+    .arrow-back {
+    width: 40px;       /* Smaller for mobile */
+    height: 40px;
+    top: 11px;
+    left: 10px;
+  }
+
+  h1 {
+    font-size: 1.8rem; /* Compact heading for smaller screens */
+    margin-top: 8px;
+  }
 }
 
 .pie-chart-class{

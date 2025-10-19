@@ -9,6 +9,10 @@
     cursor: pointer;
 }
 
+.music{
+    cursor: pointer;
+}
+
 .widgets{
     display:flex;
     justify-content: center;

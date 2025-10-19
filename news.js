@@ -19,7 +19,7 @@ function renderArticles(data) {
     page.innerHTML = "";
     const error = document.createElement("h1");
     error.classList.add("error");
-    error.innerHTML = "News not available try different topic"
+    error.innerHTML = "News not available try different topic";
     page.appendChild(error);
     document.body.appendChild(page);
     return;
@@ -94,8 +94,18 @@ arrowBack.addEventListener("click", () => {
 
 input.addEventListener("keydown", (e) => {
   if (e.key === "Enter") {
-    fetchData(input.value);
-    input.value = "";
+    if (input.value === "") {
+      page.innerHTML = "";
+      const error = document.createElement("h1");
+      error.classList.add("error");
+      error.innerHTML = "News not available try different topic";
+      page.appendChild(error);
+      document.body.appendChild(page);
+      return;
+    } else {
+      fetchData(input.value);
+      input.value = "";
+    }
   }
 });
 
