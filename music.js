@@ -7,8 +7,21 @@ async function getUser(query) {
     .then((res) => res.json())
     .then((data) => {
       const results = data.results;
+      const error = data.resultCount;
       const songList = document.querySelector(".song-list");
       songList.innerHTML = "";
+      
+      let errorDisplay = document.createElement('div')
+      errorDisplay.classList.add('error-display')
+      songList.appendChild(errorDisplay);
+      if(error === 0){
+        errorDisplay.innerHTML = 'Song not available'
+        document.body.appendChild(songList)
+      }
+      else{
+        errorDisplay.innerHTML = ''
+        songList.removeChild(errorDisplay)
+      }
 
       results.forEach((ele) => {
         const card = document.createElement("div");
