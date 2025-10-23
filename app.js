@@ -4,6 +4,7 @@ const weather = document.getElementById('weather')
 const news = document.getElementById('news')
 const tracker = document.getElementById('tracker')
 const music = document.getElementById('music')
+const typeGame = document.getElementById('type-tester')
 
 clock.addEventListener("click",function(){
     window.location.href = "clock.html"
@@ -28,4 +29,8 @@ tracker.addEventListener('click', () => {
 
 music.addEventListener('click', () => {
     window.location.href = 'music.html'
+})
+
+typeGame.addEventListener('click', () => {
+    window.location.href = 'Atype.html'
 })
