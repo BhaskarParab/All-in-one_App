@@ -18,10 +18,59 @@
 }
 
 .widgets{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
+    display: grid;
+  grid-template-columns: repeat(2, 1fr); /* equal column widths */
+  justify-items: center;                 /* center each item inside its cell */
+  align-items: center;
+  gap: 50px;
+  width: fit-content;                    /* shrink grid to actual content */
+  margin: 0 auto;
+
+}
+
+.widgets > * {
+  transition: all 0.3s ease;
+}
+
+/* Hover colors for each widget */
+.widgets > *:nth-child(1):hover {
+  filter: drop-shadow(0 0 10px rgb(172, 172, 172));
+  transform: scale(1.2);
+}
+
+.widgets > *:nth-child(2):hover {
+  filter: drop-shadow(0 0 10px rgb(209, 7, 0));
+  transform: scale(1.2);
+}
+
+.widgets > *:nth-child(3):hover {
+  filter: drop-shadow(0 0 10px rgb(0, 217, 255));
+  transform: scale(1.2);
+}
+
+.widgets > *:nth-child(4):hover {
+  filter: drop-shadow(0 0 10px rgb(0, 102, 255));
+  transform: scale(1.2);
+}
+
+.widgets > *:nth-child(5):hover {
+  filter: drop-shadow(0 0 10px rgb(255, 0, 212));
+  transform: scale(1.2);
+}
+
+.widgets > *:nth-child(6):hover {
+  filter: drop-shadow(0 0 10px blue);
+  transform: scale(1.2);
+}
+
+.widgets > *:nth-child(7):hover {
+  filter: drop-shadow(0 0 10px rgb(255, 208, 0));
+  transform: scale(1.2);
+}
+
+.widgets > *:last-child {
+  grid-column: 1 / 3;  /* spans both columns */
+  justify-self: center; /* centers it horizontally */
 }
 
 .tracker{
