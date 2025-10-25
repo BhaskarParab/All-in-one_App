@@ -1,13 +1,31 @@
+/* Base styles */
 body {
   background-color: black;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  min-height: 100vh;
   margin: 0;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  transition: background-color 0.3s ease-in-out;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative; /* For timer positioning */
+  max-width: 900px;
+  width: 90%;
+}
+
+.timer {
+  position: sticky;
+  /* top: -45px; /* above paragraph */
+  /* left: 11px; */ 
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: rgb(206, 158, 0);
 }
 
 .para {
@@ -15,30 +33,24 @@ body {
   font-weight: bold;
   font-size: 1.2rem;
   text-align: center;
-  max-width: 900px;
+  width: 100%;
   line-height: 1.6;
   padding: 20px;
   transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
-.para.hide {
-  opacity: 0;
-  transform: translateY(10px);
+.correct {
+  transition: color 0.2s ease, background-color 0.2s ease;
+  color: #00ff66;
 }
-
-.content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  transform: translateY(-60px); /* moves only this section up */
+.wrong {
+  transition: color 0.2s ease, background-color 0.2s ease;
+  color: #ff4d4d;
 }
-
-.correct { transition: color 0.2s ease, background-color 0.2s ease;
-     color: #00ff66; }
-.wrong { transition: color 0.2s ease, background-color 0.2s ease; 
-    color: #ff4d4d; }
-.pending {transition: color 0.2s ease, background-color 0.2s ease;
-     color: #ccc; }
+.pending {
+  transition: color 0.2s ease, background-color 0.2s ease;
+  color: #ccc;
+}
 
 .result {
   margin-top: 20px;
@@ -48,9 +60,9 @@ body {
   color: rgb(206, 158, 0);
 }
 
-
 input {
-  width: 800px;
+  width: 100%;
+  max-width: 800px;
   height: 60px;
   border: none;
   border-radius: 8px;
@@ -62,8 +74,8 @@ input {
   transition: box-shadow 0.3s ease;
 }
 
-input::placeholder{
-    font-size: x-large;
+input::placeholder {
+  font-size: x-large;
 }
 
 input:focus {
@@ -71,10 +83,11 @@ input:focus {
   box-shadow: 0 0 5px rgb(206, 158, 0);
 }
 
+/* Reset button */
 .resetbtn {
   position: fixed;
-  top: 30px;          /* adjust as you like */
-  right: 30px;        /* adjust as you like */
+  top: 30px;
+  right: 30px;
   width: 45px;
   height: 45px;
   background-color: rgb(206, 158, 0);
@@ -85,7 +98,6 @@ input:focus {
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease;
-  /* z-index: 100; stay above text */
 }
 
 .resetbtn:hover {
@@ -93,3 +105,33 @@ input:focus {
   transform: rotate(90deg);
 }
 
+/* Responsive styles */
+@media (max-width: 768px) {
+  .para {
+    font-size: 1rem;
+    padding: 15px;
+  }
+  input {
+    height: 50px;
+    font-size: 1.5rem;
+  }
+  .timer {
+    font-size: 1.2rem;
+    top: -35px;
+  }
+}
+
+@media (max-width: 480px) {
+  .para {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+  input {
+    height: 45px;
+    font-size: 1.3rem;
+  }
+  .timer {
+    font-size: 1rem;
+    top: -30px;
+  }
+}
