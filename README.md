@@ -64,12 +64,6 @@ const NewsAPI = 'Your News API Key'
 
 Contributions are always welcome!
 
-See `contributing.md` for ways to get started.
-
-Please adhere to this project's `code of conduct`.
-
-Contributing
-
 Contributions, issues, and feature requests are welcome!
 
 If you want to contribute to ALL-IN-ONE APP, please follow these steps:
@@ -95,7 +89,7 @@ Add features, fix bugs, or improve documentation.
 #### Commit your changes
 ```bash
 git commit -m "Describe your changes"
-```bash
+```
 
 #### Push to your branch
 ```bash
