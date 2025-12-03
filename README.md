@@ -24,7 +24,7 @@ This project acts as a personal playground where I experiment with essential fro
 
 run to clone the repo
 ```bash
-`git clone https://github.com/BhaskarParab/All-in-one_App.git
+git clone https://github.com/BhaskarParab/All-in-one_App.git
 ```
 ### Step 2
 #### Either manually open home.html file on double click
@@ -80,27 +80,27 @@ If you want to contribute to ALL-IN-ONE APP, please follow these steps:
 Click the Fork button on the top right of this page.
 
 #### Clone your fork
-
-`git clone https://github.com/your-username/All-in-one_App.git`
-
+```bash
+git clone https://github.com/your-username/All-in-one_App.git
+```
 
 #### Create a new branch
-
-`git checkout -b feature-name`
-
+```bash
+git checkout -b feature-name
+```
 
 Make your changes
 Add features, fix bugs, or improve documentation.
 
 #### Commit your changes
-
-`git commit -m "Describe your changes"`
-
+```bash
+git commit -m "Describe your changes"
+```bash
 
 #### Push to your branch
-
-`git push origin feature-name`
-
+```bash
+git push origin feature-name
+```
 
 #### Open a Pull Request (PR)
 Go to your fork on GitHub → "Pull Requests" → "New Pull Request".
