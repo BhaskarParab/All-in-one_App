@@ -23,9 +23,9 @@ This project acts as a personal playground where I experiment with essential fro
 ### Step 1
 
 run to clone the repo
-
+```bash
 `git clone https://github.com/BhaskarParab/All-in-one_App.git
-`
+```
 ### Step 2
 #### Either manually open home.html file on double click
 or
